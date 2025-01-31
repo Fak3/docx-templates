@@ -1,0 +1,32 @@
+[project]
+name = "docx-templates"
+version = "0.1"
+description = "Populate docx template file with variables from json"
+authors = [
+    {name = "Evstifeev Roman", email = "someuniquename@gmail.com"},
+]
+dependencies = [
+    "python-docx>=1.1.2",
+    "typer>=0.12.5",
+    "jinja2>=3.1.4",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+ipdb = [
+    "ipdb>=0.13.13",
+]
+
+[project.scripts]
+# Install executable cli app with this package distribution.
+docx_templates = "docx_templates.main:app"
