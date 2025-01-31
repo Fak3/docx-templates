@@ -8,7 +8,8 @@ from typing_extensions import Annotated
 
 
 
-app = Typer(name='docx-templates', pretty_exceptions_enable=True)
+app = Typer(name='docx-templates', pretty_exceptions_enable=True, no_args_is_help=True)
+
 
 class SilentUndefined(Undefined):
     def _fail_with_undefined_error(self, *args, **kwargs):
