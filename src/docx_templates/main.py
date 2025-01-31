@@ -8,7 +8,12 @@ from typing_extensions import Annotated
 
 
 
-app = Typer(name='docx-templates', pretty_exceptions_enable=True, no_args_is_help=True)
+app = Typer(
+    name='docx-templates',
+    pretty_exceptions_enable=True,
+    no_args_is_help=True,
+    rich_markup_mode=None
+)
 
 
 class SilentUndefined(Undefined):
